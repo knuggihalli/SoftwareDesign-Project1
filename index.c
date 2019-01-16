@@ -1,18 +1,4 @@
-/*
-Kavun Nuggihalli
-Feb 12 2018
-Low Level Ajaj
-Hw 3
 
-This is an ATM program.
-Welcome funcitons just prints out hello
-Pin function uses pointer and for loop to let user try 3 times
-if pin is returned correctly options function prints what user can do
-sorrounded with while loop for menu
-logic inside adds to transictions and affects local vars
-exit chooses recipt
-
-*/
 #include <stdio.h>
 
 //functions
