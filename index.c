@@ -12,7 +12,7 @@ void balance();
 int main(){
   //vars
   float p = 0;//bit flip for pin
-  float b = 5000;//balance
+  float b = 0;//balance
   float numt = 0;// number transactions
   float recipt = 0;//recipt
   float val; // what user does
@@ -78,14 +78,15 @@ int main(){
         scanf("%f", &leave);
 
         if(leave == 1){
-          printf("\n");
-          pr("Thank you have a good day.", 0);
-          printf("Balance: $%.1f\n", b);
-          printf("Withdrawl Limmit: $%.1f\n", limmit);
-          printf("Deposit Limmit: $%.1f\n", dlimmit);
-          printf("Transactions: %.0f\n", numt);
-          printf("\n");
-          x = 2;
+            printf("\n");
+            pr("Thank you have a good day.", 0);
+            pr("Amount Received: ", b);
+            b = b / 5;
+            b = b / 2;
+            int time = (int) b;
+            printf("Expires: %d\n", time);
+            printf("\n");
+            x = 2;
         }else{
           pr("Thank you have a good day.", 0);
           x = 2;
