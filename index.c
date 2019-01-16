@@ -56,11 +56,11 @@ int main(){
         }
       }else if(val == 3){//deposit
         printf("\n");
-        printf("Deposit [$%.1f limmit]: \n", dlimmit);
-        printf("How much will you deposit [enter an amount]:");
+        printf("Deposit nickels, dimes or quarters...\n");
+        printf("insert coin...");
         scanf("%f", &give);
 
-        if(dlimmit > 0 && dlimmit>give){
+        if(((int)give % 5) == 0 && give < dlimmit && (give != 10 && give != 15)){
           dlimmit = dlimmit - give;
           b = b + give;
           printf("\n");
