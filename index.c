@@ -12,7 +12,7 @@ void balance();
 int main(){
   //vars
   float p = 0;//bit flip for pin
-  float b = 5000;//balance
+  float b = 0;//balance
   float numt = 0;// number transactions
   float recipt = 0;//recipt
   float val; // what user does
@@ -34,27 +34,7 @@ int main(){
         printf("\n");
         printf("Balance: $%.1f\n", b);
         numt++;
-      }else if(val == 2){//Withdrawl
-        printf("\n");
-        printf("Choose $20,$40,$60,$80,$100... [$%.1f limmit]: \n", limmit);
-        printf("How much will you withdraw [enter an amount]:");
-        scanf("%f", &take);
-
-        if(limmit > 0 && (int)take%20 == 0 && limmit>take){
-          limmit = limmit - take;
-          b = b - take;
-          float output = take/20;
-          printf("\n");
-          printf("Balance: $%.1f\n", b);
-          printf("Limmit: $%.1f\n", limmit);
-          printf("Output: %.0f $20 bills \n", output);
-          numt++;
-        }else{
-          printf("You have either hit your limmit for today or have given an invalid input \n");
-          printf("Remember all inputs should be an increment of $20 \n");
-          numt++;
-        }
-      }else if(val == 3){//deposit
+      }else if(val == 2){//deposit
         printf("\n");
         printf("Deposit [$%.1f limmit]: \n", dlimmit);
         printf("How much will you deposit [enter an amount]:");
@@ -71,7 +51,7 @@ int main(){
           printf("You have hit your limmit \n");
           numt++;
         }
-      }else if(val == 4){//exit
+      }else if(val == 3){//exit
         printf("\n");
         printf("Exit");
         printf("Recipt? [1=yes 2=no]:");
@@ -135,8 +115,7 @@ void options(){
   pr("The types of ATM transictions are:", 0);
   printf("\n");
   pr("\t 1.Balance", 0);
-  pr("\t 2.Withdrawl", 0);
-  pr("\t 3.Deposit", 0);
-  pr("\t 4.Exit", 0);
+  pr("\t 2.Deposit", 0);
+  pr("\t 3.Exit", 0);
   printf("\n");
 }
